@@ -1,0 +1,88 @@
+/* Navigation styles */
+.navigation {
+    width: 100%;
+    max-width: 1310px;
+    height: auto;
+    margin: 34px auto;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+.logo {
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.logo-capital { text-transform: uppercase; }
+.logo-lower { text-transform: lowercase; }
+
+.nav-menu ul {
+    display: flex;
+    gap: 20px;
+}
+.nav-menu a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 5px 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+.nav-menu a:hover {
+    background-color: #f0f0f0;
+}
+.nav-menu a.active {
+    background-color: #e0e0e0;
+}
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.nav-icon { width: 23px; height: 23px; opacity: 0.83; background-color: #565656; }
+.nav-icon-circle { width: 38px; height: 37px; background-color: #D0D0D0; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.cart-icon { width: 22.96px; height: 21.08px; background-color: rgba(86, 86, 86, 0.83); }
+.favorite-icon { width: 21.13px; height: 22.04px; }
+
+/* Hamburger Menu Toggle */
+.nav-toggle {
+    display: none;
+    width: 30px;
+    height: 22px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1001;
+}
+.hamburger, .hamburger::before, .hamburger::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #333;
+    transition: all 0.3s ease-in-out;
+    left: 0;
+}
+.hamburger { top: 50%; transform: translateY(-50%); }
+.hamburger::before { top: -10px; }
+.hamburger::after { top: 10px; }
+
+/* Icon masks */
+.search-icon { -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>') no-repeat center; mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>') no-repeat center; }
+.favorite-icon { -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>') no-repeat center; mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>') no-repeat center; }
+.cart-icon { -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>') no-repeat center; mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>') no-repeat center; }
